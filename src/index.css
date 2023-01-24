@@ -69,3 +69,23 @@ button:hover {
   font-weight: bold;
   font-size: 3rem;
 }
+
+@media (min-width: 768px) {
+  .definition {
+    font-size: 4rem;
+  }
+
+  p,
+  li {
+    font-size: 1.5rem;
+  }
+
+  small {
+    font-size: 1.25rem;
+  }
+
+  input,
+  button {
+    font-size: 1.3rem;
+  }
+}
