@@ -90,14 +90,49 @@ Otherwise, render the definition of the word */}
                       key={index}
                       style={{
                         color: "#555",
-                        fontSize: "1.25rem",
                         marginTop: "0.5rem",
                       }}
                     >
                       {def.definition}
+
+                      <br />
+                      {def.example && (
+                        <div style={{ fontSize: 18 }}>
+                          Example: {def.example}
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ol>
+
+                {meaning.synonyms !== null && (
+                  <>
+                    <ul
+                      style={{
+                        listStyleType: "none",
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: 8,
+                        marginTop: 10,
+                      }}
+                    >
+                      {meaning.synonyms.map((synonym, index) => (
+                        <li
+                          key={index}
+                          style={{
+                            backgroundColor: "#f1f1f1",
+                            fontSize: 14,
+                            paddingLeft: 10,
+                            paddingRight: 10,
+                            borderRadius: 5,
+                          }}
+                        >
+                          {synonym}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </article>
             ))}
           </div>
